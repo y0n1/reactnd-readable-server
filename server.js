@@ -8,9 +8,11 @@ const config = require('./config')
 const categories = require('./categories')
 const posts = require('./posts')
 const comments = require('./comments')
+const morgan = require('morgan')
 
 const app = express()
 
+app.use(morgan('tiny'))
 app.use(express.static('public'))
 app.use(cors())
 
